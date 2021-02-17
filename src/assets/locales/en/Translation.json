@@ -1,6 +1,9 @@
 {
-    "password": "Password",
-    "email": "Email address",
-    "signup": "Sign up",
-    "forgot": "Forgot your password?"
-  }
+  "appName": "Sales cart",  
+  "signIn": "Log In",
+  "email": "Email address",
+  "password": "Password",
+  "rememberMe": "Remember password",
+  "forgot": "Forgot password?",
+  "signUp": "Create New Account"
+}

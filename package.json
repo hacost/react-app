@@ -12,6 +12,8 @@
   "author": "Héctor Acosta <hacost@hotmail.com>",
   "license": "",
   "dependencies": {
+    "@material-ui/core": "latest",
+    "@material-ui/icons": "latest",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.19.0",
     "eslint-config-airbnb": "^18.2.1",

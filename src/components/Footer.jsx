@@ -3,7 +3,9 @@ import '../assets/styles/components/Footer.scss';
 
 const Footer = () => (
   <footer className='item footer'>
-    <h2>Footer component</h2>
+    <a href='/'>Términos de uso</a>
+    <a href='/'>Declaración de privacidad</a>
+    <a href='/'>Centro de ayuda</a>
   </footer>
 );
 

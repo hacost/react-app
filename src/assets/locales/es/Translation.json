@@ -1,6 +1,10 @@
 {
-    "password": "Contraseña",
-    "email": "Correo electrónico",
-    "signup": "Crear cuenta",
-    "forgot": "¿Olvidaste tu clave?"
-  }
+  "appName": "Carrito de venta",  
+  "signIn": "Iniciar sesión",
+  "email": "Correo electrónico",
+  "password": "Contraseña",
+  "rememberMe": "Recordar contraseña",
+  "forgot": "¿Olvidaste tu contraseña?",
+  "signUp": "Crear cuenta nueva"
+
+}

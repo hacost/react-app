@@ -1,11 +1,11 @@
 import React from 'react';
 import '../assets/styles/components/Header.scss';
-import logo from '../assets/static/your-logo.png';
+import logo from '../assets/static/logo.jpg';
 import CartTranslate from '../../i18n';
 
 const Header = () => (
   <header className='item header'>
-    <img className='header__logo' src={logo} alt='your logo' />
+    <img className='header__logo' src={logo} alt='logo' />
     <h1>{CartTranslate.t('signup')}</h1>
   </header>
 );

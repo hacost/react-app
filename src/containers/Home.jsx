@@ -4,6 +4,8 @@ import Aside from '../components/Aside';
 import Content from '../components/Content';
 import Footer from '../components/Footer';
 import '../assets/styles/Home.scss';
+import '../assets/styles/Media.scss';
+
 
 const Home = () => (
   <div className='container'>

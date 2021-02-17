@@ -3,9 +3,9 @@ import Header from '../components/Header';
 import Aside from '../components/Aside';
 import Content from '../components/Content';
 import Footer from '../components/Footer';
-import '../assets/styles/App.scss';
+import '../assets/styles/Home.scss';
 
-const App = () => (
+const Home = () => (
   <div className='container'>
     <Header />
     <Aside />
@@ -14,4 +14,4 @@ const App = () => (
   </div>
 );
 
-export default App;
+export default Home;

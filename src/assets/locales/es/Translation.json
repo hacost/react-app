@@ -1,10 +1,22 @@
 {
-  "appName": "Carrito de venta",  
-  "signIn": "Iniciar sesión",
-  "email": "Correo electrónico",
-  "password": "Contraseña",
-  "rememberMe": "Recordar contraseña",
-  "forgot": "¿Olvidaste tu contraseña?",
-  "signUp": "Crear cuenta nueva"
-
+  "app": {
+    "appName": "Carrito de venta", 
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "cellPhone": "Número de celular",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "signIn": "Iniciar sesión",
+    "signUp": "Crear cuenta nueva"
+  },
+  "signIn": {
+    "rememberMe": "Recordar contraseña",
+    "forgot": "¿Olvidaste tu contraseña?"
+  },
+  "signUp": {
+    "signUp": "Registrarte",
+    "quick": "Es rápido y fácil.",
+    "agree": "Al hacer clic en Registrarte, aceptas nuestras Condiciones, la Política de datos y la Política de cookies.",
+    "haveAccount": "¿Ya tienes una cuenta?"
+  }
 }

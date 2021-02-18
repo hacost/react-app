@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/styles/components/Login.scss';
+import '../assets/styles/containers/Login.scss';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
@@ -20,7 +20,7 @@ function Copyright() {
     <Typography variant='body2' color='textSecondary' align='center'>
       {'Copyright © '}
       <Link color='inherit' href='https://material-ui.com/'>
-        {CartTranslate.t('appName')}
+        {CartTranslate.t('app.appName')}
       </Link>
       {' '}
       {new Date().getFullYear()}
@@ -61,7 +61,7 @@ const Login = () => {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component='h1' variant='h5'>
-          {CartTranslate.t('signIn')}
+          {CartTranslate.t('app.signIn')}
         </Typography>
         <form className={classes.form} noValidate>
           <TextField
@@ -70,7 +70,7 @@ const Login = () => {
             required
             fullWidth
             id='email'
-            label={CartTranslate.t('email')}
+            label={CartTranslate.t('app.email')}
             name='email'
             autoComplete='email'
             autoFocus
@@ -81,14 +81,14 @@ const Login = () => {
             required
             fullWidth
             name='password'
-            label={CartTranslate.t('password')}
+            label={CartTranslate.t('app.password')}
             type='password'
             id='password'
             autoComplete='current-password'
           />
           <FormControlLabel
             control={<Checkbox value='remember' color='primary' />}
-            label={CartTranslate.t('rememberMe')}
+            label={CartTranslate.t('signIn.rememberMe')}
           />
           <Button
             type='submit'
@@ -97,17 +97,17 @@ const Login = () => {
             color='primary'
             className={classes.submit}
           >
-            {CartTranslate.t('signIn')}
+            {CartTranslate.t('app.signIn')}
           </Button>
           <Grid container>
             <Grid item xs>
               <Link href='#' variant='body2'>
-                {CartTranslate.t('forgot')}
+                {CartTranslate.t('signIn.forgot')}
               </Link>
             </Grid>
             <Grid item>
               <Link href='#' variant='body2'>
-                {CartTranslate.t('signUp')}
+                {CartTranslate.t('app.signUp')}
               </Link>
             </Grid>
           </Grid>

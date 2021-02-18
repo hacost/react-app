@@ -1,6 +1,6 @@
 import React from 'react';
 import '../assets/styles/components/Header.scss';
-import logo from '../assets/static/logo.jpg';
+import logo from '../assets/static/logo.png';
 import CartTranslate from '../../i18n';
 
 const Header = () => (

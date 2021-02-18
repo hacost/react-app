@@ -1,9 +1,22 @@
 {
-  "appName": "Sales cart",  
-  "signIn": "Log In",
-  "email": "Email address",
-  "password": "Password",
-  "rememberMe": "Remember password",
-  "forgot": "Forgot password?",
-  "signUp": "Create New Account"
+  "app": {
+    "appName": "Sales cart",  
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "cellPhone": "Mobile number",
+    "email": "Email address",
+    "password": "Password", 
+    "signIn": "Log In",
+    "signUp": "Create New Account"
+  },
+  "signIn": {
+    "rememberMe": "Remember password",
+    "forgot": "Forgot password?"
+  },
+  "signUp": {
+    "signUp": "Sign Up",
+    "quick": "It’s quick and easy.",
+    "agree": "By clicking Sign Up, you agree to our Terms, Data Policy and Cookies Policy.",
+    "haveAccount": "Already have an account?"
+  }
 }

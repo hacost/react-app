@@ -1,6 +1,6 @@
 # Sales Cart
 
-Developing [React](https://reactjs.org/) based applications using ES6 syntax and [webpack](https://webpack.js.org/).
+[React](https://reactjs.org/) based application using ES6 syntax and [webpack](https://webpack.js.org/).
 
 ## Features
 

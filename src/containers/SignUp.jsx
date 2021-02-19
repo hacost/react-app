@@ -1,10 +1,11 @@
 import React from 'react';
 import '../assets/styles/containers/SignUp.scss';
+import '../assets/styles/Common.scss';
+import { Link } from 'react-router-dom';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
@@ -17,7 +18,7 @@ function Copyright() {
   return (
     <Typography variant='body2' color='textSecondary' align='center'>
       {'Copyright © '}
-      <Link color='inherit' href='https://carritodeventa.com'>
+      <Link to='/' className='body2 textSecondary underlineHover'>
         {CartTranslate.t('app.appName')}
       </Link>
       {' '}
@@ -127,7 +128,7 @@ const Register = () => {
           </Button>
           <Grid container justify='flex-end'>
             <Grid item>
-              <Link href='#' variant='body2'>
+              <Link to='/login' className='body2 underlineHover'>
                 {CartTranslate.t('signUp.haveAccount')}
                 {' '}
                 {CartTranslate.t('app.signIn')}

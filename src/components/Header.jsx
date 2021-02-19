@@ -1,12 +1,14 @@
 import React from 'react';
 import '../assets/styles/components/Header.scss';
+import { Link } from 'react-router-dom';
 import logo from '../assets/static/logo.png';
-import CartTranslate from '../../i18n';
 
 const Header = () => (
   <header className='item header'>
-    <img className='header__logo' src={logo} alt='logo' />
-    <h1>{CartTranslate.t('signup')}</h1>
+    <Link to='/'>
+      <img className='header__logo' src={logo} alt='logo' />
+    </Link>
+
   </header>
 );
 

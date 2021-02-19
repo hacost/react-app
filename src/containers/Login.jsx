@@ -1,5 +1,7 @@
 import React from 'react';
 import '../assets/styles/containers/Login.scss';
+import '../assets/styles/Common.scss';
+import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
@@ -11,7 +13,6 @@ import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
-import Link from '@material-ui/core/Link';
 import Checkbox from '@material-ui/core/Checkbox';
 import CartTranslate from '../../i18n';
 
@@ -19,7 +20,7 @@ function Copyright() {
   return (
     <Typography variant='body2' color='textSecondary' align='center'>
       {'Copyright © '}
-      <Link color='inherit' href='https://material-ui.com/'>
+      <Link to='/' className='body2 textSecondary underlineHover'>
         {CartTranslate.t('app.appName')}
       </Link>
       {' '}
@@ -101,12 +102,12 @@ const Login = () => {
           </Button>
           <Grid container>
             <Grid item xs>
-              <Link href='#' variant='body2'>
+              <Link to='/forgot' className='body2 underlineHover'>
                 {CartTranslate.t('signIn.forgot')}
               </Link>
             </Grid>
             <Grid item>
-              <Link href='#' variant='body2'>
+              <Link to='/signup' className='body2 underlineHover'>
                 {CartTranslate.t('app.signUp')}
               </Link>
             </Grid>

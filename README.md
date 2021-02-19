@@ -1,6 +1,6 @@
-# React app template
+# Sales Cart
 
-Provide a template for developing [React](https://reactjs.org/) based applications using ES6 syntax and [webpack](https://webpack.js.org/).
+Developing [React](https://reactjs.org/) based applications using ES6 syntax and [webpack](https://webpack.js.org/).
 
 ## Features
 
@@ -18,4 +18,4 @@ Provide a template for developing [React](https://reactjs.org/) based applicatio
 * Run `npm run dev` to build the project, start watching files and run the local server
 
 ## Preview
-![alt text](https://github.com/hacost/react-app-template/blob/main/src/assets/static/preview.png?raw=true)
+![alt text](https://github.com/hacost/sales-cart/blob/main/src/assets/static/logo.png?raw=true)

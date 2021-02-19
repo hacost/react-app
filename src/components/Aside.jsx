@@ -2,9 +2,7 @@ import React from 'react';
 import '../assets/styles/components/Aside.scss';
 
 const Aside = () => (
-  <aside className='item aside'>
-    <h2> Aside component</h2>
-  </aside>
+  <aside className='item aside' />
 );
 
 export default Aside;

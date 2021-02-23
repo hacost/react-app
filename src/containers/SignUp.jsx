@@ -1,6 +1,6 @@
 import React from 'react';
 import '../assets/styles/containers/SignUp.scss';
-import '../assets/styles/Common.scss';
+import '../assets/styles/commons/Common.scss';
 import { Link } from 'react-router-dom';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';

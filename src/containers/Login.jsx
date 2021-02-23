@@ -1,6 +1,6 @@
 import React from 'react';
 import '../assets/styles/containers/Login.scss';
-import '../assets/styles/Common.scss';
+import '../assets/styles/commons/Common.scss';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';

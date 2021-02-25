@@ -1,15 +1,30 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import '../assets/styles/containers/Home.scss';
+import Categories from '../components/Categories';
+import Carousel from '../components/Carousel';
+import CarouselItem from '../components/CarouselItem';
 
-const Home = ({ user, myList }) => (
+const Home = ({ user, myList, products }) => (
   <section className='item content'>
-    <h2>Content component </h2>
     <>
-      <h1>{user.firstName}</h1>
-      {myList.length > 0 &&
-        <h2>la lista tiene valor...</h2>
-      }
+      <h2>
+        User:
+        {' '}
+        {user.firstName}
+      </h2>
+      {myList.length > 0 && (
+        <Categories title='My sale products'>
+          <Carousel>
+            {myList.map((item) => <CarouselItem key={item.id} {...item} />)}
+          </Carousel>
+        </Categories>
+      )}
+      <Categories title='Product List'>
+        <Carousel>
+          {products.map((item) => <CarouselItem key={item.id} {...item} />)}
+        </Carousel>
+      </Categories>
     </>
   </section>
 
@@ -19,6 +34,7 @@ const mapStateToProps = (state) => {
   return {
     user: state.user,
     myList: state.myList,
+    products: state.products,
   };
 };
 

@@ -6,11 +6,15 @@ import Button from '@material-ui/core/Button';
 import { addToCart, deleteProduct } from '../actions/Cart';
 
 const CarouselItem = (props) => {
-  const { id, name, category, price, cover } = props;
+  const { id, name, category, price, cover, isList } = props;
   const handleAddToCart = () => {
     props.addToCart({
       id, name, category, price, cover,
     });
+  };
+
+  const handleDeleteProduct = (itemId) => {
+    props.deleteProduct(itemId);
   };
 
   return (
@@ -18,15 +22,29 @@ const CarouselItem = (props) => {
       <img className='carousel-item__img' src={cover} alt={name} />
       <div className='carousel-item__details'>
         <div>
-          <Button
-            type='submit'
-            fullWidth
-            variant='contained'
-            color='secondary'
-            onClick={handleAddToCart}
-          >
-            +
-          </Button>
+          {isList ? (
+            <Button
+              type='submit'
+              fullWidth
+              variant='contained'
+              color='secondary'
+              onClick={() => handleDeleteProduct(id)}
+            >
+              -
+            </Button>
+          ) :
+            (
+              <Button
+                type='submit'
+                fullWidth
+                variant='contained'
+                color='primary'
+                onClick={handleAddToCart}
+              >
+                +
+              </Button>
+            )}
+
         </div>
         <p className='carousel-item__details--title'>{name}</p>
         <p className='carousel-item__details--subtitle'>

@@ -8,7 +8,7 @@ const reducer = (state, action) => {
     case 'DELETE_PRODUCT':
       return {
         ...state,
-        myList
+        myList: state.myList.filter((items) => items.id !== action.payload),
       };
     default:
       return state;

@@ -16,7 +16,7 @@ const Home = ({ user, myList, products }) => (
       {myList.length > 0 && (
         <Categories title='My sale products'>
           <Carousel>
-            {myList.map((item) => <CarouselItem key={item.id} {...item} />)}
+            {myList.map((item) => <CarouselItem key={item.id} {...item} isList />)}
           </Carousel>
         </Categories>
       )}

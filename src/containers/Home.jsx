@@ -11,7 +11,7 @@ const Home = ({ user, myList, products }) => (
       <h2>
         User:
         {' '}
-        {user.firstName}
+        {user.email}
       </h2>
       {myList.length > 0 && (
         <Categories title='My sale products'>

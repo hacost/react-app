@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../assets/styles/containers/Login.scss';
 import '../assets/styles/commons/Common.scss';
 import { Link } from 'react-router-dom';
@@ -14,7 +14,9 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import Checkbox from '@material-ui/core/Checkbox';
+import { connect } from 'react-redux';
 import CartTranslate from '../../i18n';
+import loginRequest from '../actions/App';
 
 function Copyright() {
   return (
@@ -50,7 +52,24 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Login = () => {
+const Login = (props) => {
+  const [form, setValues] = useState({
+    email: '',
+  });
+
+  const handleInput = (event) => {
+    setValues({
+      ...form,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleSubmit = (event) => {
+    // para no mandar los parametros por url
+    event.preventDefault();
+    props.loginRequest(form);
+    props.history.push('/');
+  };
 
   const classes = useStyles();
 
@@ -64,7 +83,7 @@ const Login = () => {
         <Typography component='h1' variant='h5'>
           {CartTranslate.t('app.signIn')}
         </Typography>
-        <form className={classes.form} noValidate>
+        <form className={classes.form} onSubmit={handleSubmit}>
           <TextField
             variant='outlined'
             margin='normal'
@@ -75,6 +94,7 @@ const Login = () => {
             name='email'
             autoComplete='email'
             autoFocus
+            onChange={handleInput}
           />
           <TextField
             variant='outlined'
@@ -86,6 +106,7 @@ const Login = () => {
             type='password'
             id='password'
             autoComplete='current-password'
+            onChange={handleInput}
           />
           <FormControlLabel
             control={<Checkbox value='remember' color='primary' />}
@@ -122,4 +143,8 @@ const Login = () => {
 
 };
 
-export default Login;
+const mapDispatchToProps = {
+  loginRequest,
+};
+
+export default connect(null, mapDispatchToProps)(Login);

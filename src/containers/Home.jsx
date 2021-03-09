@@ -17,8 +17,15 @@ const Home = (props) => {
   return (
     <section className='item content'>
       <>
-        { hasUser ?
-          <h2>{user.email}</h2> :
+        { hasUser ? (
+          <h2>
+            {user.firstName}
+            {' '}
+            {user.email}
+            {' '}
+            {user.password}
+          </h2>
+        ) :
           null}
         { hasUser ? (
           <h3>

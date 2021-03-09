@@ -8,4 +8,9 @@ const logoutRequest = (payload) => ({
   payload,
 });
 
-export { loginRequest, logoutRequest };
+const signUpRequest = (payload) => ({
+  type: 'SIGNUP_REQUEST',
+  payload,
+});
+
+export { loginRequest, logoutRequest, signUpRequest };

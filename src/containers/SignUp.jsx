@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { connect } from 'react-redux';
 import '../assets/styles/containers/SignUp.scss';
 import '../assets/styles/commons/Common.scss';
 import { Link } from 'react-router-dom';
@@ -12,7 +13,9 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import { signUpRequest } from '../actions/App';
 import CartTranslate from '../../i18n';
+
 
 function Copyright() {
   return (
@@ -48,8 +51,28 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Register = () => {
+const SignUp = (props) => {
   const classes = useStyles();
+  const [form, setValues] = useState({
+    email: '',
+    firstName: '',
+    lastName: '',
+    password: '',
+  });
+
+  const handleInput = (event) => {
+    setValues({
+      ...form,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    props.signUpRequest(form);
+    props.history.push('/');
+  };
+
   return (
     <Container component='main' maxWidth='xs'>
       <CssBaseline />
@@ -63,7 +86,7 @@ const Register = () => {
         <Typography variant='body2' color='textSecondary' align='left'>
           {CartTranslate.t('signUp.quick')}
         </Typography>
-        <form className={classes.form} noValidate>
+        <form className={classes.form} onSubmit={handleSubmit}>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
@@ -75,6 +98,7 @@ const Register = () => {
                 id='firstName'
                 label={CartTranslate.t('app.firstName')}
                 autoFocus
+                onChange={handleInput}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -86,6 +110,7 @@ const Register = () => {
                 label={CartTranslate.t('app.lastName')}
                 name='lastName'
                 autoComplete='lname'
+                onChange={handleInput}
               />
             </Grid>
             <Grid item xs={12}>
@@ -97,6 +122,7 @@ const Register = () => {
                 label={CartTranslate.t('app.email')}
                 name='email'
                 autoComplete='email'
+                onChange={handleInput}
               />
             </Grid>
             <Grid item xs={12}>
@@ -109,6 +135,7 @@ const Register = () => {
                 type='password'
                 id='password'
                 autoComplete='current-password'
+                onChange={handleInput}
               />
             </Grid>
             <Grid item xs={12}>
@@ -144,4 +171,8 @@ const Register = () => {
   );
 };
 
-export default Register;
+const mapDispatchToProps = {
+  signUpRequest,
+};
+
+export default connect(null, mapDispatchToProps)(SignUp);

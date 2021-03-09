@@ -7,8 +7,8 @@ import App from './routes/App';
 
 const initialState = {
   'user': {
-    'email': '',
-    'password': '',
+    'email': 'hacost@hotmail.com',
+    'password': '123',
   },
   'playing': {},
   'myList': [],

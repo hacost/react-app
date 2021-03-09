@@ -16,7 +16,7 @@ import Box from '@material-ui/core/Box';
 import Checkbox from '@material-ui/core/Checkbox';
 import { connect } from 'react-redux';
 import CartTranslate from '../../i18n';
-import loginRequest from '../actions/App';
+import { loginRequest } from '../actions/App';
 
 function Copyright() {
   return (

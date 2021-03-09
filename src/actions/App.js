@@ -3,4 +3,9 @@ const loginRequest = (payload) => ({
   payload,
 });
 
-export default loginRequest;
+const logoutRequest = (payload) => ({
+  type: 'LOGOUT_REQUEST',
+  payload,
+});
+
+export { loginRequest, logoutRequest };

@@ -70,7 +70,7 @@ const Login = (props) => {
     event.preventDefault();
     //sent the data to action
     props.loginRequest(form);
-    //redirect user to home 
+    //redirect user to home
     props.history.push('/');
   };
 

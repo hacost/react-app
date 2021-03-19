@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import '../assets/styles/components/CarouselItem.scss';
 import Button from '@material-ui/core/Button';
 import { addToCart, deleteProduct } from '../actions/Cart';
@@ -44,6 +45,9 @@ const CarouselItem = (props) => {
                 +
               </Button>
             )}
+          <Link to={`/player/${id}`}>
+            <p>Play</p>
+          </Link>
 
         </div>
         <p className='carousel-item__details--title'>{name}</p>

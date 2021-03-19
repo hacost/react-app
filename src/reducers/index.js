@@ -25,6 +25,13 @@ const reducer = (state, action) => {
         ...state,
         user: action.payload,
       };
+    case 'GET_VIDEO_SOURCE':
+      return {
+        ...state,
+        // find by id from my array videos
+        playing: state.products.find((item) => item.id === action.payload) ||
+        [],
+      };
     default:
       return state;
   }

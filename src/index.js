@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, compose } from 'redux';
 import reducer from './reducers';
 import App from './routes/App';
 
@@ -19,6 +19,7 @@ const initialState = {
       'price': 195,
       'category': 'Jugos',
       'cover': 'http://dummyimage.com/800x600.png/99118E/ffffff',
+      'source': 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
     },
     {
       'id': '2',
@@ -26,6 +27,7 @@ const initialState = {
       'price': 177,
       'category': 'Galletas',
       'cover': 'http://dummyimage.com/800x600.png/302140/ffffff',
+      'source': 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
     },
     {
       'id': '3',
@@ -33,6 +35,7 @@ const initialState = {
       'price': 160,
       'category': 'Galletas',
       'cover': 'http://dummyimage.com/800x600.png/5472FF/ffffff',
+      'source': 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
     },
     {
       'id': '4',
@@ -40,6 +43,7 @@ const initialState = {
       'price': 220,
       'category': 'Chiles enlatados',
       'cover': 'http://dummyimage.com/800x600.png/B36F20/ffffff',
+      'source': 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
     },
     {
       'id': '5',
@@ -47,11 +51,13 @@ const initialState = {
       'price': 470,
       'category': 'Chiles enlatados',
       'cover': 'http://dummyimage.com/800x600.png/CCC539/ffffff',
+      'source': 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
     },
   ],
 };
 
-const store = createStore(reducer, initialState);
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(reducer, initialState, composeEnhancers());
 
 ReactDom.render(
   <Provider store={store}>

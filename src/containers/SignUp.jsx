@@ -16,7 +16,6 @@ import Container from '@material-ui/core/Container';
 import { signUpRequest } from '../actions/App';
 import CartTranslate from '../../i18n';
 
-
 function Copyright() {
   return (
     <Typography variant='body2' color='textSecondary' align='center'>

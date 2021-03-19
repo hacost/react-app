@@ -44,13 +44,17 @@ const Home = (props) => {
         {myList.length > 0 && (
           <Categories title='My sale products'>
             <Carousel>
-              {myList.map((item) => <CarouselItem key={item.id} {...item} isList />)}
+              {// eslint-disable-next-line react/jsx-props-no-spreading
+                myList.map((item) => <CarouselItem key={item.id} {...item} isList />)
+              }
             </Carousel>
           </Categories>
         )}
         <Categories title='Product List'>
           <Carousel>
-            {products.map((item) => <CarouselItem key={item.id} {...item} />)}
+            { // eslint-disable-next-line react/jsx-props-no-spreading
+              products.map((item) => <CarouselItem key={item.id} {...item} />)
+            }
           </Carousel>
         </Categories>
       </>

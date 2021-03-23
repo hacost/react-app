@@ -7,6 +7,8 @@ import App from './routes/App';
 
 const initialState = {
   'user': {
+    'firstName': 'Héctor',
+    'lastName': 'Acosta',
     'email': 'hacost@hotmail.com',
     'password': '123',
   },

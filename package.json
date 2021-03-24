@@ -13,6 +13,7 @@
   "license": "",
   "dependencies": {
     "@material-ui/core": "latest",
+    "@material-ui/data-grid": "latest",
     "@material-ui/icons": "latest",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.19.0",

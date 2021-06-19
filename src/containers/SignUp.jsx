@@ -103,7 +103,7 @@ const SignUp = (props) => {
                 onChange={handleInput}
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} sm={6}>
               <TextField
                 variant='outlined'
                 required
@@ -112,6 +112,19 @@ const SignUp = (props) => {
                 label={CartTranslate.t('app.password')}
                 type='password'
                 id='password'
+                autoComplete='current-password'
+                onChange={handleInput}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                variant='outlined'
+                required
+                fullWidth
+                name='confirmPassword'
+                label={CartTranslate.t('app.confirmPassword')}
+                type='password'
+                id='confirmPassword'
                 autoComplete='current-password'
                 onChange={handleInput}
               />

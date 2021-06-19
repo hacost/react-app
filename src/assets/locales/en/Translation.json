@@ -6,6 +6,7 @@
     "whatsApp": "WhatsApp",
     "email": "Email address",
     "password": "Password", 
+    "confirmPassword": "Confirm Password",
     "signIn": "Log In",
     "signUp": "Create New Account"
   },

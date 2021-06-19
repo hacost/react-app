@@ -3,7 +3,7 @@
     "appName": "Sales cart",  
     "firstName": "First Name",
     "lastName": "Last Name",
-    "cellPhone": "Mobile number",
+    "whatsApp": "WhatsApp",
     "email": "Email address",
     "password": "Password", 
     "signIn": "Log In",

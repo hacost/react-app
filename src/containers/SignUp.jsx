@@ -96,6 +96,18 @@ const SignUp = (props) => {
                 variant='outlined'
                 required
                 fullWidth
+                id='whatsApp'
+                label={CartTranslate.t('app.whatsApp')}
+                name='whatsApp'
+                autoComplete='tel-national'
+                onChange={handleInput}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                variant='outlined'
+                required
+                fullWidth
                 name='password'
                 label={CartTranslate.t('app.password')}
                 type='password'

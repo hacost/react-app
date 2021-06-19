@@ -3,7 +3,7 @@
     "appName": "Carrito de venta", 
     "firstName": "Nombre",
     "lastName": "Apellido",
-    "cellPhone": "Número de celular",
+    "whatsApp": "WhatsApp",
     "email": "Correo electrónico",
     "password": "Contraseña",
     "signIn": "Iniciar sesión",

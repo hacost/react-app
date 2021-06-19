@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import '../assets/styles/containers/Login.scss';
 import '../assets/styles/commons/Common.scss';
 import { Link } from 'react-router-dom';
-import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -17,40 +15,8 @@ import Checkbox from '@material-ui/core/Checkbox';
 import { connect } from 'react-redux';
 import CartTranslate from '../../i18n';
 import { loginRequest } from '../actions/App';
-
-function Copyright() {
-  return (
-    <Typography variant='body2' color='textSecondary' align='center'>
-      {'Copyright © '}
-      <Link to='/' className='body2 textSecondary underlineHover'>
-        {CartTranslate.t('app.appName')}
-      </Link>
-      {' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
-
-const useStyles = makeStyles((theme) => ({
-  paper: {
-    marginTop: theme.spacing(8),
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
-  },
-  form: {
-    width: '100%', // Fix IE 11 issue.
-    marginTop: theme.spacing(1),
-  },
-  submit: {
-    margin: theme.spacing(3, 0, 2),
-  },
-}));
+import Copyright from '../components/Copyright';
+import useStyles from '../modules/MakeStylesMUI';
 
 const Login = (props) => {
   const [form, setValues] = useState({

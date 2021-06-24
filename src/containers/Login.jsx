@@ -17,6 +17,7 @@ import CartTranslate from '../modules/Common';
 import { loginRequest } from '../actions/App';
 import Copyright from '../components/Copyright';
 import useStyles from '../modules/MakeStylesMUI';
+import Message from '../components/Message';
 
 const Login = (props) => {
   const [form, setValues] = useState({
@@ -45,6 +46,7 @@ const Login = (props) => {
   return (
     <Container component='main' maxWidth='xs'>
       <CssBaseline />
+      <Message typeMsg='warning' msg='Hi, this is Alert test' show={false} />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
           <LockOutlinedIcon />

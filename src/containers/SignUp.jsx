@@ -16,6 +16,7 @@ import { signUpRequest } from '../actions/App';
 import CartTranslate from '../modules/Common';
 import Copyright from '../components/Copyright';
 import useStyles from '../modules/MakeStylesMUI';
+import Message from '../components/Message';
 
 const SignUp = (props) => {
   const classes = useStyles();
@@ -42,6 +43,7 @@ const SignUp = (props) => {
   return (
     <Container component='main' maxWidth='xs'>
       <CssBaseline />
+      <Message typeMsg='error' msg='Hi, this is Alert test' show={true} />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
           <LockOutlinedIcon />

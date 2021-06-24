@@ -1,4 +1,4 @@
-# Sales Cart
+# React app Template
 
 [React](https://reactjs.org/) based application using ES6 syntax and [webpack](https://webpack.js.org/).
 
@@ -18,4 +18,3 @@
 * Run `npm run dev` to build the project, start watching files and run the local server
 
 ## Preview
-![alt text](https://github.com/hacost/sales-cart/blob/main/src/assets/static/logo.png?raw=true)

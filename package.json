@@ -1,7 +1,7 @@
 {
-  "name": "sales-cart",
+  "name": "react-app-template",
   "version": "1.0.0",
-  "description": "Sales cart web app",
+  "description": "react app template",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -17,6 +17,7 @@
     "@material-ui/core": "latest",
     "@material-ui/data-grid": "latest",
     "@material-ui/icons": "latest",
+    "@material-ui/lab": "latest",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.19.0",
     "eslint-config-airbnb": "^18.2.1",

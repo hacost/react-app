@@ -13,7 +13,7 @@ import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import Checkbox from '@material-ui/core/Checkbox';
 import { connect } from 'react-redux';
-import CartTranslate from '../../i18n';
+import CartTranslate from '../modules/Common';
 import { loginRequest } from '../actions/App';
 import Copyright from '../components/Copyright';
 import useStyles from '../modules/MakeStylesMUI';
@@ -50,7 +50,7 @@ const Login = (props) => {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component='h1' variant='h5'>
-          {CartTranslate.t('app.signIn')}
+          {CartTranslate('app.signIn')}
         </Typography>
         <form className={classes.form} onSubmit={handleSubmit}>
           <TextField
@@ -59,7 +59,7 @@ const Login = (props) => {
             required
             fullWidth
             id='email'
-            label={CartTranslate.t('app.email')}
+            label={CartTranslate('app.email')}
             name='email'
             autoComplete='email'
             autoFocus
@@ -71,7 +71,7 @@ const Login = (props) => {
             required
             fullWidth
             name='password'
-            label={CartTranslate.t('app.password')}
+            label={CartTranslate('app.password')}
             type='password'
             id='password'
             autoComplete='current-password'
@@ -79,7 +79,7 @@ const Login = (props) => {
           />
           <FormControlLabel
             control={<Checkbox value='remember' color='primary' />}
-            label={CartTranslate.t('signIn.rememberMe')}
+            label={CartTranslate('signIn.rememberMe')}
           />
           <Button
             type='submit'
@@ -88,17 +88,17 @@ const Login = (props) => {
             color='primary'
             className={classes.submit}
           >
-            {CartTranslate.t('app.signIn')}
+            {CartTranslate('app.signIn')}
           </Button>
           <Grid container>
             <Grid item xs>
               <Link to='/forgot' className='body2 underlineHover'>
-                {CartTranslate.t('signIn.forgot')}
+                {CartTranslate('signIn.forgot')}
               </Link>
             </Grid>
             <Grid item>
               <Link to='/signup' className='body2 underlineHover'>
-                {CartTranslate.t('app.signUp')}
+                {CartTranslate('app.signUp')}
               </Link>
             </Grid>
           </Grid>

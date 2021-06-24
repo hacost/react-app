@@ -13,7 +13,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import { signUpRequest } from '../actions/App';
-import CartTranslate from '../../i18n';
+import CartTranslate from '../modules/Common';
 import Copyright from '../components/Copyright';
 import useStyles from '../modules/MakeStylesMUI';
 
@@ -29,7 +29,7 @@ const SignUp = (props) => {
   const handleInput = (event) => {
     setValues({
       ...form,
-      [event.target.name]: event.target.value,
+      [even.target.name]: event.target.value,
     });
   };
 
@@ -47,10 +47,10 @@ const SignUp = (props) => {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component='h1' variant='h5'>
-          {CartTranslate.t('signUp.signUp')}
+          {CartTranslate('signUp.signUp')}
         </Typography>
         <Typography variant='body2' color='textSecondary' align='left'>
-          {CartTranslate.t('signUp.quick')}
+          {CartTranslate('signUp.quick')}
         </Typography>
         <form className={classes.form} onSubmit={handleSubmit}>
           <Grid container spacing={2}>
@@ -62,7 +62,7 @@ const SignUp = (props) => {
                 required
                 fullWidth
                 id='firstName'
-                label={CartTranslate.t('app.firstName')}
+                label={CartTranslate('app.firstName')}
                 autoFocus
                 onChange={handleInput}
               />
@@ -73,7 +73,7 @@ const SignUp = (props) => {
                 required
                 fullWidth
                 id='lastName'
-                label={CartTranslate.t('app.lastName')}
+                label={CartTranslate('app.lastName')}
                 name='lastName'
                 autoComplete='lname'
                 onChange={handleInput}
@@ -85,7 +85,7 @@ const SignUp = (props) => {
                 required
                 fullWidth
                 id='email'
-                label={CartTranslate.t('app.email')}
+                label={CartTranslate('app.email')}
                 name='email'
                 autoComplete='email'
                 onChange={handleInput}
@@ -97,7 +97,7 @@ const SignUp = (props) => {
                 required
                 fullWidth
                 id='whatsApp'
-                label={CartTranslate.t('app.whatsApp')}
+                label={CartTranslate('app.whatsApp')}
                 name='whatsApp'
                 autoComplete='tel-national'
                 onChange={handleInput}
@@ -109,7 +109,7 @@ const SignUp = (props) => {
                 required
                 fullWidth
                 name='password'
-                label={CartTranslate.t('app.password')}
+                label={CartTranslate('app.password')}
                 type='password'
                 id='password'
                 autoComplete='current-password'
@@ -122,7 +122,7 @@ const SignUp = (props) => {
                 required
                 fullWidth
                 name='confirmPassword'
-                label={CartTranslate.t('app.confirmPassword')}
+                label={CartTranslate('app.confirmPassword')}
                 type='password'
                 id='confirmPassword'
                 autoComplete='current-password'
@@ -131,7 +131,7 @@ const SignUp = (props) => {
             </Grid>
             <Grid item xs={12}>
               <Typography variant='caption' color='textSecondary' align='left'>
-                {CartTranslate.t('signUp.agree')}
+                {CartTranslate('signUp.agree')}
               </Typography>
             </Grid>
           </Grid>
@@ -142,14 +142,14 @@ const SignUp = (props) => {
             color='primary'
             className={classes.submit}
           >
-            {CartTranslate.t('signUp.signUp')}
+            {CartTranslate('signUp.signUp')}
           </Button>
           <Grid container justify='flex-end'>
             <Grid item>
               <Link to='/login' className='body2 underlineHover'>
-                {CartTranslate.t('signUp.haveAccount')}
+                {CartTranslate('signUp.haveAccount')}
                 {' '}
-                {CartTranslate.t('app.signIn')}
+                {CartTranslate('app.signIn')}
               </Link>
             </Grid>
           </Grid>
